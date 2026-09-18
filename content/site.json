@@ -1,0 +1,27 @@
+{
+  "profile": {
+    "name": "Yao Zhuang",
+    "role": "Master’s student at the University of Melbourne, currently in China",
+    "bio": "I work where law, evidence, and emerging technology meet.",
+    "availability": "Open to research conversations",
+    "location": "China",
+    "languages": "English / Chinese",
+    "focus": "legal reasoning / AI alignment / trustworthy AI / AI & law",
+    "email": "xukye@outlook.com"
+  },
+  "publicationStatuses": [
+    "Working Paper",
+    "Submitted",
+    "Under Review",
+    "Revising",
+    "Accepted",
+    "Published",
+    "Presented"
+  ],
+  "tabs": [
+    { "id": "index", "index": "", "label": "Index", "source": "./content/index.json" },
+    { "id": "publications", "index": "01", "label": "Publications", "source": "./content/publications.json" },
+    { "id": "experience", "index": "03", "label": "Experience", "source": "./content/experience.json" },
+    { "id": "education", "index": "04", "label": "Education", "source": "./content/education.json" }
+  ]
+}

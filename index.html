@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fcfbf8">
+  <meta name="description" content="Yao Zhuang — academic profile, publications, education, and experience.">
+  <title>Yao Zhuang — Academic Profile</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./academic.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="topbar">
+    <div class="spectrum" aria-hidden="true"></div>
+    <nav aria-label="On this page">
+      <div class="nav-inner">
+        <a class="nav-brand" href="#about">Yao Zhuang</a>
+        <div class="nav-links" id="page-nav"></div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="page-wrap">
+    <aside class="sidebar" aria-label="Personal profile">
+      <div class="sidebar-sticky">
+        <img class="portrait" src="./assets/avatar.jpg" alt="Portrait of Yao Zhuang">
+        <h1 id="profile-name">Yao Zhuang</h1>
+        <p class="profile-role" id="profile-role"></p>
+
+        <div class="interest-chips" id="interest-chips" aria-label="Research interests"></div>
+
+        <dl class="profile-meta">
+          <div><dt>Based</dt><dd id="profile-location"></dd></div>
+          <div><dt>Languages</dt><dd id="profile-languages"></dd></div>
+          <div><dt>Status</dt><dd id="profile-availability"></dd></div>
+        </dl>
+
+        <div class="profile-actions">
+          <a id="email-link" href="mailto:xukye@outlook.com">✉ Email</a>
+          <button id="print-cv" type="button">▤ Print / PDF</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content" id="main-content">
+      <div id="page-content" aria-live="polite">
+        <p class="loading">Loading profile…</p>
+      </div>
+
+      <footer>
+        <p>© <span id="footer-year"></span> Yao Zhuang</p>
+        <a href="#about">Back to top ↑</a>
+      </footer>
+    </main>
+  </div>
+
+  <script src="./academic.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "kicker": "PRACTICE / LEADERSHIP",
+  "title": "Work with\nreal consequences.",
+  "lead": "Court experience, public-facing communication, and the practical work of turning complex material into something other people can use.",
+  "sections": [
+    {
+      "id": "experience",
+      "index": "05",
+      "title": "Experience",
+      "type": "timeline",
+      "entries": [
+        {
+          "period": "2024.10-2024.12",
+          "title": "Beijing Haidian District People’s Court, Comprehensive Trial Division",
+          "meta": "Judicial Assistant Intern · Part-time",
+          "subtitle": "Judicial Assistant Intern",
+          "detail": "Part-time"
+        },
+        {
+          "period": "2022-2025",
+          "title": "New Media Center, Renmin University of China",
+          "meta": "Student Executive Chair",
+          "subtitle": "Student Executive Chair"
+        },
+        {
+          "period": "2022-2024",
+          "title": "Publicity Department, School of Law, Renmin University of China",
+          "meta": "Student Deputy Director",
+          "subtitle": "Student Deputy Director"
+        }
+      ]
+    }
+  ]
+}

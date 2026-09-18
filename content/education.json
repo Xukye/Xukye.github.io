@@ -1,0 +1,86 @@
+{
+  "kicker": "STUDY / QUALIFICATION",
+  "title": "Legal foundations,\ncontinuing questions.",
+  "lead": "Formal legal education and professional qualifications, alongside an expanding interest in computational methods and research design.",
+  "sections": [
+    {
+      "id": "education",
+      "index": "04",
+      "title": "Education",
+      "type": "timeline",
+      "entries": [
+        {
+          "period": "2026.09-2027.06",
+          "title": "Stevens Institute of Technology",
+          "meta": "Graduate Certificate · Applied Data Science (Online)",
+          "degree": "Graduate Certificate",
+          "score": "Applied Data Science (Online)"
+        },
+        {
+          "period": "2026.02-2026.12",
+          "title": "University of Melbourne",
+          "meta": "Master of Laws · Current average: H1",
+          "degree": "Master of Laws",
+          "score": "Current average: H1"
+        },
+        {
+          "period": "2026.07",
+          "title": "National Taiwan University",
+          "meta": "Summer Program · Law, Algorithm, and AI",
+          "degree": "Summer Program",
+          "score": "Law, Algorithm, and AI"
+        },
+        {
+          "period": "2021.09-2025.06",
+          "title": "Renmin University of China",
+          "meta": "Bachelor of Law · Weighted average: 84/100",
+          "degree": "Bachelor of Law",
+          "score": "Weighted average: 84/100"
+        }
+      ]
+    },
+    {
+      "id": "qualifications",
+      "index": "07",
+      "title": "Qualifications",
+      "type": "list",
+      "items": [
+        {
+          "title": "Legal Professional Qualification Certificate (Class A), China",
+          "detail": "Objective examination: 235/300 · Subjective examination: 131/180"
+        },
+        {
+          "title": "IELTS 7.5",
+          "detail": "Listening 7.5 · Reading 9.0 · Writing 6.5 · Speaking 6.5"
+        },
+        {
+          "title": "Mandarin Chinese · Level 2-A",
+          "detail": "90.0/100"
+        },
+        {
+          "title": "Professional Certificates",
+          "details": [
+            {
+              "title": "AI, Justice, and the Rule of Law",
+              "issuer": "Saïd Business School, University of Oxford",
+              "date": "2026.08",
+              "format": "Online",
+              "url": "https://certify.sbs.ox.ac.uk/8f3b7942-a4b7-4235-8119-30005b6238b3#acc.gE48szPQ"
+            },
+            {
+              "title": "Python for Everybody Specialization",
+              "issuer": "University of Michigan · Coursera",
+              "date": "2026.02",
+              "format": "Online",
+              "url": "https://coursera.org/share/74d4dbb1520af509e668d3aab7c09770"
+            }
+          ]
+        },
+        {
+          "title": "Outstanding Student Leader & Scholarship Recipient",
+          "detail": "Renmin University of China"
+        }
+      ]
+    }
+  ]
+}

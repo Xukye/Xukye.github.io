@@ -1,0 +1,37 @@
+{
+  "kicker": "RESEARCH OUTPUT / WRITING",
+  "title": "Ideas made\ntraceable.",
+  "lead": "Journal articles, conference papers, preprints, and working papers in one research record.",
+  "sections": [
+    {
+      "id": "publications",
+      "index": "02",
+      "title": "Publications",
+      "type": "timeline",
+      "entries": [
+        {
+          "period": "2026.06",
+          "title": "When the Thinking Mode Strengthens the Anchor: Authority-Rationalized Anchoring in LLM Legal Judgment",
+          "venue": "Artificial Intelligence and Law",
+          "status": ["Under Review"],
+          "recognition": [],
+          "links": [
+            {
+              "label": "Preprint",
+              "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6975478"
+            }
+          ]
+        },
+        {
+          "period": "2026.08",
+          "title": "When the Reviewed Field Must Be Shown: An Appellate LLM Validity Audit",
+          "venue": "JURIX 2026",
+          "status": ["Under Review"],
+          "recognition": [],
+          "links": []
+        }
+      ],
+      "note": "For future entries, use venue for the journal or conference, status for Working Paper, Submitted, Under Review, Revising, Accepted, Published, or Presented, and recognition for awards."
+    }
+  ]
+}

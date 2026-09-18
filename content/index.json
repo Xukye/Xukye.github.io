@@ -1,0 +1,40 @@
+{
+  "kicker": "PERSONAL CV / SELECTED WORK",
+  "title": "Law, evidence,\nand emerging technology.",
+  "lead": "A law graduate from Renmin University of China with a professional legal qualification in China, currently studying at the University of Melbourne. My current interests centre on legal reasoning, AI alignment, trustworthy AI, and the practical relationship between artificial intelligence and law.",
+  "sections": [
+    {
+      "id": "about",
+      "index": "01",
+      "title": "About",
+      "type": "prose",
+      "paragraphs": []
+    },
+    {
+      "id": "updates",
+      "index": "NOW",
+      "title": "Selected updates",
+      "type": "timeline",
+      "entries": [
+        {
+          "period": "2026-Now",
+          "title": "Evaluating Legal Reasoning Under Prior-Answer Influence",
+          "meta": "Current research · AI and law",
+          "body": "Studying how prior answers affect legal reasoning, evidence use, and the reliability of model evaluation."
+        },
+        {
+          "period": "2025",
+          "title": "Research on Child Testimony and Corroboration",
+          "meta": "Undergraduate thesis · Renmin University of China",
+          "body": "Completed a thesis on the evidentiary value and corroboration of child testimony in cases involving crimes against children."
+        },
+        {
+          "period": "2024",
+          "title": "Judicial Assistant Internship",
+          "meta": "Beijing Haidian District People’s Court",
+          "body": "Supported retrial and civil first-instance case management, judicial-document review, file organisation, and case-law research."
+        }
+      ]
+    }
+  ]
+}
