@@ -35,7 +35,7 @@
   }
 
   function renderProfile(profile) {
-    byId("profile-name").textContent = profile.name;
+    byId("profile-name").innerHTML = `${escapeHtml(profile.name)}${profile.nameZh ? ` <span class="profile-name-zh" lang="zh-CN">${escapeHtml(profile.nameZh)}</span>` : ""}`;
     byId("profile-role").textContent = profile.role;
     byId("profile-location").textContent = profile.location;
     byId("profile-languages").textContent = profile.languages;
@@ -72,13 +72,16 @@
   function renderPublicationMeta(entry) {
     const statuses = Array.isArray(entry.status) ? entry.status : entry.status ? [entry.status] : [];
     const recognition = Array.isArray(entry.recognition) ? entry.recognition : entry.recognition ? [entry.recognition] : [];
+    const presentations = Array.isArray(entry.presentation) ? entry.presentation : entry.presentation ? [entry.presentation] : [];
     const links = Array.isArray(entry.links) ? entry.links : [];
+    const venueType = ["journal", "conference", "project"].includes(entry.venueType) ? entry.venueType : "project";
 
-    if (!entry.venue && !statuses.length && !recognition.length && !links.length) return "";
+    if (!entry.venue && !statuses.length && !recognition.length && !presentations.length && !links.length) return "";
 
     return `<div class="pub-meta">
-      ${entry.venue ? `<span class="publication-venue">${escapeHtml(entry.venue)}</span>` : ""}
-      ${statuses.map((status) => `<span class="publication-status">· ${escapeHtml(status)}</span>`).join("")}
+      ${entry.venue ? `<span class="publication-venue venue-${venueType}">${escapeHtml(entry.venue)}</span>` : ""}
+      ${presentations.map((item) => `<span class="publication-venue venue-conference">${escapeHtml(item)}</span>`).join("")}
+      ${statuses.map((status) => `<span class="publication-status">${escapeHtml(status)}</span>`).join("")}
       ${recognition.map((item) => `<span class="award">★ ${escapeHtml(item)}</span>`).join("")}
       ${renderLinkItems(entry)}
     </div>`;
@@ -91,7 +94,8 @@
     const icons = { paper: "▤", page: "◎", code: "⌘", data: "▦", video: "▶", misc: "↗" };
     return links.map((link) => {
       const kind = linkKind(link.label);
-      return `<a class="link-${kind}" href="${escapeHtml(safeHref(link.url))}" target="_blank" rel="noreferrer"><span aria-hidden="true">${icons[kind]}</span>${escapeHtml(link.label)}</a>`;
+      const icon = /^preprint$/i.test(String(link.label).trim()) ? "" : `<span aria-hidden="true">${icons[kind]}</span>`;
+      return `<a class="link-${kind}" href="${escapeHtml(safeHref(link.url))}" target="_blank" rel="noreferrer">${icon}${escapeHtml(link.label)}</a>`;
     }).join("");
   }
 

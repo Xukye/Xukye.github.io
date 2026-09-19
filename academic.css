@@ -198,6 +198,14 @@ nav {
   letter-spacing: -.025em;
 }
 
+.profile-name-zh {
+  font-family: "Songti SC", STSong, SimSun, serif;
+  font-weight: 900;
+  letter-spacing: 0;
+  display: block;
+  margin-top: 4px;
+}
+
 .profile-role {
   margin: 10px 0 0;
   color: var(--ink);
@@ -418,6 +426,8 @@ nav {
 }
 
 .award,
+.publication-venue,
+.publication-status,
 .pub-meta a,
 .resource-links a {
   min-height: 25px;
@@ -429,10 +439,28 @@ nav {
   font: 500 9px/1.4 var(--mono);
 }
 
-.publication-venue,
 .publication-status {
-  color: var(--ink-soft);
-  font: 400 11px/1.5 var(--mono);
+  color: var(--violet);
+  border: 1px solid var(--violet-line);
+  background: var(--violet-bg);
+}
+
+.venue-journal {
+  color: var(--blue);
+  border: 1px solid var(--blue-line);
+  background: var(--blue-bg);
+}
+
+.venue-conference {
+  color: var(--amber);
+  border: 1px solid var(--amber-line);
+  background: var(--amber-bg);
+}
+
+.venue-project {
+  color: var(--green);
+  border: 1px solid var(--green-line);
+  background: var(--green-bg);
 }
 
 .award {

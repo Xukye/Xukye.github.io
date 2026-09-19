@@ -1,7 +1,8 @@
 {
   "profile": {
-    "name": "Yao Zhuang 姚壮",
-    "role": "Master’s student at the University of Melbourne, currently in China",
+    "name": "Yao Zhuang",
+    "nameZh": "姚壮",
+    "role": "Master’s student at the University of Melbourne",
     "bio": "I work where law, evidence, and emerging technology meet.",
     "availability": "Open to research conversations",
     "location": "China",
