@@ -428,6 +428,7 @@ nav {
 .award,
 .publication-venue,
 .publication-status,
+.experience-tag,
 .pub-meta a,
 .resource-links a {
   min-height: 25px;
@@ -443,6 +444,18 @@ nav {
   color: var(--violet);
   border: 1px solid var(--violet-line);
   background: var(--violet-bg);
+}
+
+.experience-internship {
+  color: var(--navy);
+  border: 1px solid var(--navy-line);
+  background: var(--navy-bg);
+}
+
+.experience-campus {
+  color: var(--green);
+  border: 1px solid var(--green-line);
+  background: var(--green-bg);
 }
 
 .venue-journal {

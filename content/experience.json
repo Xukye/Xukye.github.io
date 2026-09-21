@@ -12,21 +12,23 @@
         {
           "period": "2024.10-2024.12",
           "title": "Beijing Haidian District People’s Court, Comprehensive Trial Division",
-          "meta": "Judicial Assistant Intern · Part-time",
-          "subtitle": "Judicial Assistant Intern",
-          "detail": "Part-time"
+          "meta": "Judicial Assistant · Internship",
+          "subtitle": "Judicial Assistant",
+          "experienceType": "internship"
         },
         {
           "period": "2022-2025",
           "title": "New Media Center, Renmin University of China",
-          "meta": "Student Executive Chair",
-          "subtitle": "Student Executive Chair"
+          "meta": "Executive Chair · Campus Experience",
+          "subtitle": "Executive Chair",
+          "experienceType": "campus"
         },
         {
           "period": "2022-2024",
           "title": "Publicity Department, School of Law, Renmin University of China",
-          "meta": "Student Deputy Director",
-          "subtitle": "Student Deputy Director"
+          "meta": "Deputy Director · Campus Experience",
+          "subtitle": "Deputy Director",
+          "experienceType": "campus"
         }
       ]
     }

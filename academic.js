@@ -119,10 +119,15 @@
     const publicationMeta = publicationStyle ? renderPublicationMeta(entry) : "";
     const subtitle = entry.subtitle || entry.degree;
     const detail = entry.detail || entry.score;
-    const structuredMeta = subtitle || detail ? `
+    const experienceLabels = { internship: "Internship", campus: "Campus Experience" };
+    const experienceTag = experienceLabels[entry.experienceType]
+      ? `<span class="experience-tag experience-${entry.experienceType}">${experienceLabels[entry.experienceType]}</span>`
+      : "";
+    const structuredMeta = subtitle || detail || experienceTag ? `
       <div class="entry-secondary">
         ${subtitle ? `<span class="entry-subtitle">${escapeHtml(subtitle)}</span>` : ""}
         ${detail ? `<span class="entry-detail">${escapeHtml(detail)}</span>` : ""}
+        ${experienceTag}
       </div>` : "";
     return `
       <article class="entry">

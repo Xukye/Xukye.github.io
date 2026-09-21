@@ -12,9 +12,9 @@
         {
           "period": "2026.09-2027.06",
           "title": "Stevens Institute of Technology",
-          "meta": "Graduate Certificate · Applied Data Science (Online)",
-          "degree": "Graduate Certificate",
-          "score": "Applied Data Science (Online)"
+          "meta": "GCert in Applied Data Science · Online",
+          "degree": "GCert in Applied Data Science",
+          "score": "Online"
         },
         {
           "period": "2026.02-2026.12",
@@ -26,9 +26,8 @@
         {
           "period": "2026.07",
           "title": "National Taiwan University",
-          "meta": "Summer Program · Law, Algorithm, and AI",
-          "degree": "Summer Program",
-          "score": "Law, Algorithm, and AI"
+          "meta": "Summer Program for Law, Algorithm, and AI",
+          "degree": "Summer Program for Law, Algorithm, and AI"
         },
         {
           "period": "2021.09-2025.06",
