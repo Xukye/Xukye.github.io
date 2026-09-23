@@ -10,10 +10,11 @@
       "type": "timeline",
       "entries": [
         {
-          "period": "2026.06",
+          "period": "2026.05-2026.07",
           "title": "When the Thinking Mode Strengthens the Anchor: Authority-Rationalized Anchoring in LLM Legal Judgment",
           "venue": "Artificial Intelligence and Law",
           "venueType": "journal",
+          "authorRoles": ["sole"],
           "status": ["Under Review"],
           "recognition": [],
           "links": [
@@ -28,12 +29,23 @@
           "title": "When the Reviewed Field Must Be Shown: An Appellate LLM Validity Audit",
           "venue": "JURIX 2026",
           "venueType": "conference",
+          "authorRoles": ["sole"],
+          "status": ["Under Review"],
+          "recognition": [],
+          "links": []
+        },
+        {
+          "period": "2026.08",
+          "title": "How Would the Mayor’s Child Usually Address the Mayor? Informative Non-Commitment in LLM Gender-Bias Evaluation",
+          "venue": "AAAI 2027 · AI Alignment Track",
+          "venueType": "conference",
+          "authorRoles": ["sole"],
           "status": ["Under Review"],
           "recognition": [],
           "links": []
         }
       ],
-      "note": "For future entries, use venueType journal, conference, or project. Use presentation for Oral or Poster; status for Working Paper, Submitted, Under Review, Revising, Accepted, Published, or Presented; and recognition for awards."
+      "note": "For future entries, use venueType journal, conference, or project. Use authorRoles sole, first, co-first, corresponding, or co-author; presentation for Oral or Poster; status for Working Paper, Submitted, Under Review, Revising, Accepted, Published, or Presented; and recognition for awards."
     }
   ]
 }

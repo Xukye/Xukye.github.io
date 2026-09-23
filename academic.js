@@ -73,14 +73,23 @@
     const statuses = Array.isArray(entry.status) ? entry.status : entry.status ? [entry.status] : [];
     const recognition = Array.isArray(entry.recognition) ? entry.recognition : entry.recognition ? [entry.recognition] : [];
     const presentations = Array.isArray(entry.presentation) ? entry.presentation : entry.presentation ? [entry.presentation] : [];
+    const authorRoles = Array.isArray(entry.authorRoles) ? entry.authorRoles : entry.authorRoles ? [entry.authorRoles] : [];
     const links = Array.isArray(entry.links) ? entry.links : [];
     const venueType = ["journal", "conference", "project"].includes(entry.venueType) ? entry.venueType : "project";
+    const authorRoleLabels = {
+      sole: "Sole Author",
+      first: "First Author",
+      "co-first": "Co-first Author",
+      corresponding: "Corresponding Author",
+      "co-author": "Co-author"
+    };
 
-    if (!entry.venue && !statuses.length && !recognition.length && !presentations.length && !links.length) return "";
+    if (!entry.venue && !statuses.length && !recognition.length && !presentations.length && !authorRoles.length && !links.length) return "";
 
     return `<div class="pub-meta">
       ${entry.venue ? `<span class="publication-venue venue-${venueType}">${escapeHtml(entry.venue)}</span>` : ""}
       ${presentations.map((item) => `<span class="publication-venue venue-conference">${escapeHtml(item)}</span>`).join("")}
+      ${authorRoles.filter((role) => authorRoleLabels[role]).map((role) => `<span class="author-role author-${role}">${authorRoleLabels[role]}</span>`).join("")}
       ${statuses.map((status) => `<span class="publication-status">${escapeHtml(status)}</span>`).join("")}
       ${recognition.map((item) => `<span class="award">★ ${escapeHtml(item)}</span>`).join("")}
       ${renderLinkItems(entry)}

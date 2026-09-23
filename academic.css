@@ -428,6 +428,7 @@ nav {
 .award,
 .publication-venue,
 .publication-status,
+.author-role,
 .experience-tag,
 .pub-meta a,
 .resource-links a {
@@ -444,6 +445,12 @@ nav {
   color: var(--violet);
   border: 1px solid var(--violet-line);
   background: var(--violet-bg);
+}
+
+.author-role {
+  color: var(--gray);
+  border: 1px solid var(--gray-line);
+  background: var(--gray-bg);
 }
 
 .experience-internship {
