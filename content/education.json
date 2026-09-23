@@ -32,9 +32,9 @@
         {
           "period": "2021.09-2025.06",
           "title": "Renmin University of China",
-          "meta": "Bachelor of Law · Weighted average: 84/100",
+          "meta": "Bachelor of Law · WAM: 84",
           "degree": "Bachelor of Law",
-          "score": "Weighted average: 84/100"
+          "score": "WAM: 84"
         }
       ]
     },
@@ -61,7 +61,7 @@
           "details": [
             {
               "title": "AI, Justice, and the Rule of Law",
-              "issuer": "Saïd Business School, University of Oxford",
+              "issuer": "University of Oxford · UNESCO",
               "date": "2026.08",
               "format": "Online",
               "url": "https://certify.sbs.ox.ac.uk/8f3b7942-a4b7-4235-8119-30005b6238b3#acc.gE48szPQ"

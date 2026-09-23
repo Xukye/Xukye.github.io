@@ -115,12 +115,11 @@
 
   function renderCredentialDetail(detail) {
     if (typeof detail === "string") return `<li>${escapeHtml(detail)}</li>`;
-    const metadata = [detail.issuer, detail.date, detail.format].filter(Boolean).join(" · ");
-    return `<li>
-      ${detail.url
-        ? `<a href="${escapeHtml(safeHref(detail.url))}" target="_blank" rel="noreferrer">${escapeHtml(detail.title)} <span aria-hidden="true">↗</span></a>`
-        : escapeHtml(detail.title)}${metadata ? ` · ${escapeHtml(metadata)}` : ""}
-    </li>`;
+    const prefix = [detail.date, detail.format].filter(Boolean).join(" · ");
+    const title = detail.url
+      ? `<a href="${escapeHtml(safeHref(detail.url))}" target="_blank" rel="noreferrer">${escapeHtml(detail.title)} <span aria-hidden="true">↗</span></a>`
+      : escapeHtml(detail.title);
+    return `<li>${prefix ? `${escapeHtml(prefix)} · ` : ""}${title}${detail.issuer ? ` · ${escapeHtml(detail.issuer)}` : ""}</li>`;
   }
 
   function renderEntry(entry, publicationStyle = false) {
