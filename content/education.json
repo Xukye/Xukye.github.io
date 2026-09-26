@@ -64,14 +64,16 @@
               "issuer": "University of Oxford · UNESCO",
               "date": "2026.08",
               "format": "Online",
-              "url": "https://certify.sbs.ox.ac.uk/8f3b7942-a4b7-4235-8119-30005b6238b3#acc.gE48szPQ"
+              "url": "./assets/certificates/ai-justice-and-rule-of-law.pdf",
+              "preview": "./assets/certificates/ai-justice-and-rule-of-law-preview.jpg"
             },
             {
               "title": "Python for Everybody Specialization",
               "issuer": "University of Michigan · Coursera",
               "date": "2026.02",
               "format": "Online",
-              "url": "https://coursera.org/share/74d4dbb1520af509e668d3aab7c09770"
+              "url": "./assets/certificates/python-for-everybody.pdf",
+              "preview": "./assets/certificates/python-for-everybody-preview.jpg"
             }
           ]
         },

@@ -34,12 +34,9 @@
     };
   }
 
-  function renderProfile(profile) {
+  function renderProfile(profile, introduction) {
     byId("profile-name").innerHTML = `${escapeHtml(profile.name)}${profile.nameZh ? ` <span class="profile-name-zh" lang="zh-CN">${escapeHtml(profile.nameZh)}</span>` : ""}`;
-    byId("profile-role").textContent = profile.role;
-    byId("profile-location").textContent = profile.location;
-    byId("profile-languages").textContent = profile.languages;
-    byId("profile-availability").textContent = profile.availability;
+    byId("profile-role").textContent = introduction || profile.role;
     byId("email-link").href = `mailto:${profile.email}`;
 
     const interests = String(profile.focus || "").split("/").map((item) => item.trim()).filter(Boolean);
@@ -48,7 +45,6 @@
 
   function renderNavigation() {
     const links = [
-      { id: "about", label: "About" },
       { id: "publications", label: "Publications & Projects" },
       { id: "education", label: "Education" },
       { id: "experience", label: "Experience" },
@@ -116,10 +112,26 @@
   function renderCredentialDetail(detail) {
     if (typeof detail === "string") return `<li>${escapeHtml(detail)}</li>`;
     const prefix = [detail.date, detail.format].filter(Boolean).join(" · ");
+    const preview = detail.preview
+      ? `<span class="credential-preview" aria-hidden="true"><img src="${escapeHtml(detail.preview)}" alt="" loading="lazy" decoding="async"></span>`
+      : "";
     const title = detail.url
-      ? `<a href="${escapeHtml(safeHref(detail.url))}" target="_blank" rel="noreferrer">${escapeHtml(detail.title)} <span aria-hidden="true">↗</span></a>`
+      ? `<span class="credential-link-wrap"><a href="${escapeHtml(safeHref(detail.url))}" target="_blank" rel="noreferrer">${escapeHtml(detail.title)} <span aria-hidden="true">↗</span></a>${preview}</span>`
       : escapeHtml(detail.title);
     return `<li>${prefix ? `${escapeHtml(prefix)} · ` : ""}${title}${detail.issuer ? ` · ${escapeHtml(detail.issuer)}` : ""}</li>`;
+  }
+
+  function sizeCredentialPreviews() {
+    document.querySelectorAll(".credential-preview img").forEach((image) => {
+      const applyNaturalRatio = () => {
+        if (!image.naturalWidth || !image.naturalHeight) return;
+        const ratio = Math.min(1.8, Math.max(0.75, image.naturalWidth / image.naturalHeight));
+        image.closest(".credential-preview")?.style.setProperty("--certificate-aspect", ratio.toFixed(4));
+      };
+
+      if (image.complete) applyNaturalRatio();
+      else image.addEventListener("load", applyNaturalRatio, { once: true });
+    });
   }
 
   function renderEntry(entry, publicationStyle = false) {
@@ -247,15 +259,15 @@
         entries: combinedWorkEntries
       }];
 
-      renderProfile(data.profile);
+      renderProfile(data.profile, pageById.index.lead);
       renderNavigation();
       byId("page-content").innerHTML = [
-        renderAbout(pageById.index),
         renderSimplePage("publications", "Publications & Projects", publicationSections, true),
         renderSimplePage("education", "Education", education ? [education] : []),
         renderSimplePage("experience", "Experience", pageById.experience.sections),
         renderSimplePage("credentials", "Qualifications & Awards", [qualificationSection, awardSection])
       ].join("");
+      sizeCredentialPreviews();
       byId("footer-year").textContent = new Date().getFullYear();
       byId("print-cv").addEventListener("click", () => window.print());
       trackSections();
