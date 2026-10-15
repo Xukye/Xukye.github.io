@@ -20,7 +20,7 @@
   };
 
   async function loadJson(path) {
-    const response = await fetch(path, { cache: "no-cache" });
+    const response = await fetch(`${path}?_=${Date.now()}`, { cache: "no-cache" });
     if (!response.ok) throw new Error(`Could not load ${path} (${response.status})`);
     return response.json();
   }
@@ -85,12 +85,22 @@
     return `<div class="pub-meta">
       ${entry.venue ? `<span class="publication-venue venue-${venueType}">${escapeHtml(entry.venue)}</span>` : ""}
       ${presentations.map((item) => `<span class="publication-venue venue-conference">${escapeHtml(item)}</span>`).join("")}
+      ${statuses.map((status) => {
+        const raw = String(status || "").trim();
+        const isAccepted = /accepted/i.test(raw);
+        const isReview = /review/i.test(raw);
+        const text = isAccepted ? raw.replace(/^🎉\s*/, "") : raw;
+        const icon = isAccepted ? `<span class="status-emoji" aria-hidden="true">🎉</span>` : "";
+        const statusType = isAccepted ? "status-accepted" : (isReview ? "status-under-review" : "status-default");
+        return `<span class="publication-status ${statusType}">${icon}${escapeHtml(text)}</span>`;
+      }).join("")}
       ${authorRoles.filter((role) => authorRoleLabels[role]).map((role) => `<span class="author-role author-${role}">${authorRoleLabels[role]}</span>`).join("")}
-      ${statuses.map((status) => `<span class="publication-status">${escapeHtml(status)}</span>`).join("")}
       ${recognition.map((item) => `<span class="award">★ ${escapeHtml(item)}</span>`).join("")}
       ${renderLinkItems(entry)}
     </div>`;
   }
+
+  const GITHUB_SVG = `<svg class="link-icon-svg" viewBox="0 0 16 16" width="10" height="10" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>`;
 
   function renderLinkItems(entry) {
     const links = Array.isArray(entry.links) ? entry.links : [];
@@ -99,7 +109,12 @@
     const icons = { paper: "▤", page: "◎", code: "⌘", data: "▦", video: "▶", misc: "↗" };
     return links.map((link) => {
       const kind = linkKind(link.label);
-      const icon = /^preprint$/i.test(String(link.label).trim()) ? "" : `<span aria-hidden="true">${icons[kind]}</span>`;
+      let icon = "";
+      if (/github/i.test(link.label) || /github\.com/i.test(link.url)) {
+        icon = GITHUB_SVG;
+      } else if (!/^preprint$/i.test(String(link.label).trim())) {
+        icon = `<span aria-hidden="true">${icons[kind]}</span>`;
+      }
       return `<a class="link-${kind}" href="${escapeHtml(safeHref(link.url))}" target="_blank" rel="noreferrer">${icon}${escapeHtml(link.label)}</a>`;
     }).join("");
   }
@@ -111,14 +126,14 @@
 
   function renderCredentialDetail(detail) {
     if (typeof detail === "string") return `<li>${escapeHtml(detail)}</li>`;
-    const prefix = [detail.date, detail.format].filter(Boolean).join(" · ");
+    const prefix = detail.date || "";
     const preview = detail.preview
       ? `<span class="credential-preview" aria-hidden="true"><img src="${escapeHtml(detail.preview)}" alt="" loading="lazy" decoding="async"></span>`
       : "";
     const title = detail.url
       ? `<span class="credential-link-wrap"><a href="${escapeHtml(safeHref(detail.url))}" target="_blank" rel="noreferrer">${escapeHtml(detail.title)} <span aria-hidden="true">↗</span></a>${preview}</span>`
       : escapeHtml(detail.title);
-    return `<li>${prefix ? `${escapeHtml(prefix)} · ` : ""}${title}${detail.issuer ? ` · ${escapeHtml(detail.issuer)}` : ""}</li>`;
+    return `<li>${prefix ? `${escapeHtml(prefix)} · ` : ""}${title}${detail.issuer ? ` · ${escapeHtml(detail.issuer)}` : ""}${detail.format ? ` · ${escapeHtml(detail.format)}` : ""}</li>`;
   }
 
   function sizeCredentialPreviews() {

@@ -10,6 +10,21 @@
       "type": "timeline",
       "entries": [
         {
+          "period": "2026.08",
+          "title": "When the Reviewed Field Must Be Shown: An Appellate LLM Validity Audit",
+          "venue": "JURIX 2026",
+          "venueType": "conference",
+          "authorRoles": ["sole"],
+          "status": ["Accepted"],
+          "recognition": [],
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/Xukye/reviewed-field-coupling-audit"
+            }
+          ]
+        },
+        {
           "period": "2026.05-2026.07",
           "title": "When the Thinking Mode Strengthens the Anchor: Authority-Rationalized Anchoring in LLM Legal Judgment",
           "venue": "Artificial Intelligence and Law",
@@ -21,18 +36,12 @@
             {
               "label": "Preprint",
               "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6975478"
+            },
+            {
+              "label": "GitHub",
+              "url": "https://github.com/Xukye/authority-anchor-llm"
             }
           ]
-        },
-        {
-          "period": "2026.08",
-          "title": "When the Reviewed Field Must Be Shown: An Appellate LLM Validity Audit",
-          "venue": "JURIX 2026",
-          "venueType": "conference",
-          "authorRoles": ["sole"],
-          "status": ["Under Review"],
-          "recognition": [],
-          "links": []
         },
         {
           "period": "2026.08",
@@ -42,7 +51,12 @@
           "authorRoles": ["sole"],
           "status": ["Under Review"],
           "recognition": [],
-          "links": []
+          "links": [
+            {
+              "label": "GitHub",
+              "url": "https://github.com/Xukye/inc-gender-bias-evaluation"
+            }
+          ]
         }
       ],
       "note": "For future entries, use venueType journal, conference, or project. Use authorRoles sole, first, co-first, corresponding, or co-author; presentation for Oral or Poster; status for Working Paper, Submitted, Under Review, Revising, Accepted, Published, or Presented; and recognition for awards."

@@ -429,6 +429,7 @@ nav {
   padding: 3px 9px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
   border-radius: 6px;
   font: 500 9px/1.4 var(--mono);
@@ -438,6 +439,27 @@ nav {
   color: var(--violet);
   border: 1px solid var(--violet-line);
   background: var(--violet-bg);
+}
+
+.publication-status.status-accepted {
+  color: var(--green);
+  border: 1px solid var(--green-line);
+  background: var(--green-bg);
+  padding-left: 7px;
+  padding-right: 5px;
+}
+
+.publication-status.status-under-review {
+  color: var(--gray);
+  border: 1px solid var(--gray-line);
+  background: var(--gray-bg);
+}
+
+.status-emoji {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 11px;
+  line-height: 1;
 }
 
 .author-role {
@@ -496,10 +518,18 @@ nav {
 
 .link-paper { color: #0f6e6e; background: #e2f1f0; border: 1px solid #b4dbd9; }
 .link-page { color: #5b7c4a; background: #e9f0e2; border: 1px solid #c7dbb6; }
-.link-code { color: #4a4a4a; background: #ecebe8; border: 1px solid #d3d1cb; }
+.link-code,
+.link-github { color: #553c9a; background: #f3effc; border: 1px solid #d6c8f8; }
 .link-data { color: #9c6a1e; background: #f8efd9; border: 1px solid #ead6a6; }
 .link-video { color: #a23b3b; background: #f8e7e5; border: 1px solid #eec4c0; }
 .link-misc { color: #6b6560; background: #efeeea; border: 1px solid #d9d6cf; }
+.link-icon-svg {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  vertical-align: -0.5px;
+}
 
 .detail-list article {
   display: block;
