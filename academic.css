@@ -446,13 +446,17 @@ nav {
   border: 1px solid var(--green-line);
   background: var(--green-bg);
   padding-left: 7px;
-  padding-right: 5px;
+  padding-right: 7px;
 }
 
 .publication-status.status-under-review {
   color: var(--gray);
   border: 1px solid var(--gray-line);
   background: var(--gray-bg);
+}
+
+.ends-with-d {
+  padding-right: 7px !important;
 }
 
 .status-emoji {

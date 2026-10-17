@@ -92,7 +92,8 @@
         const text = isAccepted ? raw.replace(/^🎉\s*/, "") : raw;
         const icon = isAccepted ? `<span class="status-emoji" aria-hidden="true">🎉</span>` : "";
         const statusType = isAccepted ? "status-accepted" : (isReview ? "status-under-review" : "status-default");
-        return `<span class="publication-status ${statusType}">${icon}${escapeHtml(text)}</span>`;
+        const endsWithD = /d$/i.test(text) ? " ends-with-d" : "";
+        return `<span class="publication-status ${statusType}${endsWithD}">${icon}${escapeHtml(text)}</span>`;
       }).join("")}
       ${authorRoles.filter((role) => authorRoleLabels[role]).map((role) => `<span class="author-role author-${role}">${authorRoleLabels[role]}</span>`).join("")}
       ${recognition.map((item) => `<span class="award">★ ${escapeHtml(item)}</span>`).join("")}
@@ -256,6 +257,16 @@
     update();
   }
 
+  function applyEndingCompensation() {
+    const selector = ".award, .publication-venue, .publication-status, .author-role, .experience-tag, .chip, .pub-meta a, .resource-links a";
+    document.querySelectorAll(selector).forEach((el) => {
+      const text = el.textContent.trim();
+      if (/d$/i.test(text)) {
+        el.classList.add("ends-with-d");
+      }
+    });
+  }
+
   async function initialise() {
     try {
       const data = await loadContent();
@@ -283,6 +294,7 @@
         renderSimplePage("credentials", "Qualifications & Awards", [qualificationSection, awardSection])
       ].join("");
       sizeCredentialPreviews();
+      applyEndingCompensation();
       byId("footer-year").textContent = new Date().getFullYear();
       byId("print-cv").addEventListener("click", () => window.print());
       trackSections();
