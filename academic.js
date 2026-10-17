@@ -88,7 +88,7 @@
       ${statuses.map((status) => {
         const raw = String(status || "").trim();
         const isAccepted = /accepted/i.test(raw);
-        const isReview = /review/i.test(raw);
+        const isReview = /review|submitted/i.test(raw);
         const text = isAccepted ? raw.replace(/^🎉\s*/, "") : raw;
         const icon = isAccepted ? `<span class="status-emoji" aria-hidden="true">🎉</span>` : "";
         const statusType = isAccepted ? "status-accepted" : (isReview ? "status-under-review" : "status-default");

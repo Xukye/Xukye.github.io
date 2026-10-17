@@ -25,6 +25,16 @@
           ]
         },
         {
+          "period": "2026.10",
+          "title": "Dual Authority in Legal AI: Statutes as the Target, Judgments as the Ground Truth",
+          "venue": "FAccT 2027",
+          "venueType": "conference",
+          "authorRoles": ["sole"],
+          "status": ["Submitted"],
+          "recognition": [],
+          "links": []
+        },
+        {
           "period": "2026.05-2026.07",
           "title": "When the Thinking Mode Strengthens the Anchor: Authority-Rationalized Anchoring in LLM Legal Judgment",
           "venue": "Artificial Intelligence and Law",
