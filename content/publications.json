@@ -32,7 +32,12 @@
           "authorRoles": ["sole"],
           "status": ["Submitted"],
           "recognition": [],
-          "links": []
+          "links": [
+            {
+              "label": "Preprint",
+              "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7623601"
+            }
+          ]
         },
         {
           "period": "2026.05-2026.07",
