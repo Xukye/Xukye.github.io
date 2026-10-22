@@ -64,7 +64,7 @@
               "issuer": "Imperial College London · Coursera",
               "date": "2026.10",
               "format": "Online",
-              "url": "./assets/certificates/mathematics-for-machine-learning.pdf",
+              "url": "https://coursera.org/verify/specialization/DTMJFEISGHN8",
               "preview": "./assets/certificates/mathematics-for-machine-learning-preview.jpg"
             },
             {
@@ -72,7 +72,7 @@
               "issuer": "University of Oxford · UNESCO",
               "date": "2026.08",
               "format": "Online",
-              "url": "./assets/certificates/ai-justice-and-rule-of-law.pdf",
+              "url": "https://certify.sbs.ox.ac.uk/8f3b7942-a4b7-4235-8119-30005b6238b3#acc.gE48szPQ",
               "preview": "./assets/certificates/ai-justice-and-rule-of-law-preview.jpg"
             },
             {
@@ -80,7 +80,7 @@
               "issuer": "University of Michigan · Coursera",
               "date": "2026.02",
               "format": "Online",
-              "url": "./assets/certificates/python-for-everybody.pdf",
+              "url": "https://coursera.org/share/74d4dbb1520af509e668d3aab7c09770",
               "preview": "./assets/certificates/python-for-everybody-preview.jpg"
             }
           ]
