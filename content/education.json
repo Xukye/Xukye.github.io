@@ -60,7 +60,7 @@
           "title": "Professional Certificates",
           "details": [
             {
-              "title": "Mathematics for Machine Learning Specialization",
+              "title": "Mathematics for Machine Learning",
               "issuer": "Imperial College London · Coursera",
               "date": "2026.10",
               "format": "Online",
@@ -76,7 +76,7 @@
               "preview": "./assets/certificates/ai-justice-and-rule-of-law-preview.jpg"
             },
             {
-              "title": "Python for Everybody Specialization",
+              "title": "Python for Everybody",
               "issuer": "University of Michigan · Coursera",
               "date": "2026.02",
               "format": "Online",
