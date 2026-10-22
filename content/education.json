@@ -60,6 +60,14 @@
           "title": "Professional Certificates",
           "details": [
             {
+              "title": "Mathematics for Machine Learning Specialization",
+              "issuer": "Imperial College London · Coursera",
+              "date": "2026.10",
+              "format": "Online",
+              "url": "./assets/certificates/mathematics-for-machine-learning.pdf",
+              "preview": "./assets/certificates/mathematics-for-machine-learning-preview.jpg"
+            },
+            {
               "title": "AI, Justice, and the Rule of Law",
               "issuer": "University of Oxford · UNESCO",
               "date": "2026.08",
