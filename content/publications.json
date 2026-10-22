@@ -68,6 +68,10 @@
           "recognition": [],
           "links": [
             {
+              "label": "Preprint",
+              "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7653341"
+            },
+            {
               "label": "GitHub",
               "url": "https://github.com/Xukye/inc-gender-bias-evaluation"
             }
